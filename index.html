@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Effects Lab — HTML/CSS/JS Playground</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Effects Lab</h1>
+    <div class="glass-reflection"></div>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search effects, tags…" aria-label="Search effects" />
+      <div id="tags" class="tagbar" aria-label="Tags"></div>
+    </div>
+  </header>
+
+  <main>
+    <div id="js-warning" style="max-width:1200px;margin:16px auto;padding:12px 16px;border:1px solid #8b0000;color:#ffbdbd;background:#250000;border-radius:8px">
+      If you see this, JavaScript didn’t load. Try saving and reloading the page.
+    </div>
+    
+    <section class="grid" id="grid" aria-live="polite"></section>
+  </main>
+
+  <!-- Modal -->
+  <dialog id="demoModal">
+    <div class="modal-head">
+      <h2 id="demoTitle">Demo</h2>
+      <button id="closeModal" class="btn ghost" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div id="sandbox" class="sandbox" aria-label="Demo sandbox"></div>
+      <aside id="explain" class="explain" aria-label="Explanation"></aside>
+    </div>    
+    <div class="meta">
+      <span id="metaType"></span> •
+      <span id="metaLoad"></span> •
+      <span id="metaTags"></span>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+  <!-- Add this script tag to your HTML file, right before the closing </body> tag -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"></script>
+
+</body>
+</html>
